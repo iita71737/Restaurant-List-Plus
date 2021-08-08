@@ -1,0 +1,102 @@
+<h1 class="mb-1 restaurant-show-title ">新增餐廳</h1>
+<form action="/restaurants" method="POST">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12 col-md-8 mx-auto">
+
+        {{#if error_message}}
+        <div class="alert alert-warning" role="alert">
+          <span class="mr-2">請檢查:  <strong>{{error_message}}</strong>的格式是否正確</span>
+        </div>
+        {{/if}}
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-utensils pr-2"></i>
+            餐廳名
+          </label>
+          <input type="text" name="name" placeholder="餐廳名" class="form-control" {{#if options}} value="{{options.name}}"
+            {{/if}} required>
+        </div>
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-utensils pr-2"></i>
+            餐廳英文名
+          </label>
+          <input type="text" name="name_en" placeholder="餐廳英文名" class="form-control" {{#if
+            options}}value="{{options.name_en}}" {{/if}} required>
+        </div>
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-globe-asia pr-2"></i>
+            餐廳類型
+          </label>
+          <input type="text" name="category" placeholder="餐廳類型" class="form-control" {{#if
+            options}}value="{{options.category}}" {{/if}} required>
+        </div>
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-map-marker-alt pr-2"></i>
+            地址
+          </label>
+          <input type="text" name="location" placeholder="地址" class="form-control" {{#if
+            options}}value="{{options.location}}" {{/if}} required>
+        </div>
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-map-pin pr-2"></i>
+            Google地圖連結
+          </label>
+          <input type="text" name="google_map" placeholder="Google地圖連結" class="form-control" {{#if
+            options}}value="{{options.google_map}}" {{/if}} required>
+        </div>
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-mobile-alt pr-2"></i>
+            電話
+          </label>
+          <input type="tel" name="phone" placeholder="電話" class="form-control" {{#if options}}value="{{options.phone}}"
+            {{/if}} required>
+        </div>
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-thumbs-up pr-2"></i>
+            評分
+          </label>
+          <input type="number" name="rating" placeholder="評分" class="form-control" min="0" max="5" step="0.1" {{#if
+            options}}value="{{options.rating}}" {{/if}} required>
+        </div>
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-comments pr-2"></i>
+            餐廳敘述
+          </label>
+          <input type="text" name="description" placeholder="敘述" class="form-control" {{#if
+            options}}value="{{options.description}}" {{/if}} required>
+        </div>
+
+        <div class="form-group row">
+          <label class="text-secondary">
+            <i class="fas fa-link pr-2"></i>
+            照片URL
+          </label>
+          <input type="text" name="image" placeholder="照片網址" class="form-control" {{#if options}}
+            value="{{options.image}}" {{/if}} required>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-5">
+          <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</form>
