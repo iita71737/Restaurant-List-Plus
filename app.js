@@ -15,7 +15,7 @@ const routes = require('./routes')
 const app = express()
 const PORT = process.env.PORT
 
-const hbs = exphbs.create({ defaultLayout: 'main', extname: '.hbs' })
+const hbs = exphbs.create({ defaultLayout: 'main', extname: '.hbs'})
 hbs.handlebars.registerHelper('ifEqual', function (v1, v2, options) {
   if (v1 === v2) {
     return options.fn(this);

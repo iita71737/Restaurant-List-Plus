@@ -38,8 +38,9 @@
         {{/if}}
       </div>
     </nav>
-
+    {{#if isAuthenticated}}
     <div class="banner"></div>
+    {{/if}}
   </header>
   <!-- partial templates will go here -->
   {{{ body }}}
