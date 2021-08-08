@@ -34,7 +34,11 @@
 <div class="container my-5">
   <div class="row">
     {{#unless restaurants}}
-    <h5>找不到和關鍵字: {{this.keyword}} 相符的餐廳</h5>
+    {{#if error_msg}}
+    <h5>{{error_msg}}</h5>
+    {{else}}
+    <h5>目前還沒有建立任何餐廳資料，快使用新增餐廳的功能吧！</h5>
+    {{/if}}
     {{/unless}}
     {{#each restaurants}}
     <div class="col-12 col-md-6 col-lg-4">

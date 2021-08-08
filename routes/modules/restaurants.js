@@ -19,7 +19,13 @@ router.get('/search', (req, res) => {
   Restaurant.find({ userId, $or: [{ name: { $regex: keyword } }, { category: { $regex: keyword } }] })
     .lean()
     .sort(sortMongoose[sortBy])
-    .then((res_filtered => res.render('index', { restaurants: res_filtered, keyword, sortBy })))
+    .then((res_filtered => {
+      if(res_filtered.length === 0) {
+        const error_msg = `找不到和關鍵字: ${keyword} 相符的餐廳`
+        return res.render('index', { error_msg })
+      }
+      res.render('index', { restaurants: res_filtered, keyword, sortBy })}
+      ))
     .catch(error => console.log(error))
 })
 
