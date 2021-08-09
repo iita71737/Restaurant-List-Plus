@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     .lean()
     .sort({ id: 'asc' })
     .then(restaurants => res.render('index', { restaurants }))
-    .catch(error => console.log(error))
+    .catch(error => res.render('error', { error }))
 })
 
 module.exports = router
