@@ -1,9 +1,9 @@
 # Restaurant List Plus+
-This is a website allowing users to generate their own restaurants list, which is built with Node.js and Express.
+This is a website built with Node.js and Express, which allows users to generate personalised restaurants list after setting up personal accounts.
 ![s1a1](https://user-images.githubusercontent.com/43931635/128750904-2f0cfc10-0d57-454d-b6dc-35a6b559bf26.JPG)
 
 ## Features
-This website allows the users to register their account, create their personalised restaurant list and enjoy the following features:
+This website allows the users to register their account, create their own restaurant list and enjoy the following features:
 1. Index page - browse all restaurants created, with their name, types of cuisine and ratings.
 2. Detailed information page - for each restaurants with additional information such as address (with google map link) and phone number.
 3. Create, edit or remove restaurant information.
