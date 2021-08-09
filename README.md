@@ -1,5 +1,5 @@
 # Restaurant List Plus+
-This is a website providing information about selected restaurants in Taipei, built with Node.js and Express.
+This is a website allowing users to generate their own restaurants list, which is built with Node.js and Express.
 ![s1a1](https://user-images.githubusercontent.com/43931635/128750904-2f0cfc10-0d57-454d-b6dc-35a6b559bf26.JPG)
 
 ## Features
