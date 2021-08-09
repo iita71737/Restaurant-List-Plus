@@ -15,7 +15,7 @@ const routes = require('./routes')
 const app = express()
 const PORT = process.env.PORT
 
-const hbs = exphbs.create({ defaultLayout: 'main', extname: '.hbs'})
+const hbs = exphbs.create({ defaultLayout: 'main', extname: '.hbs' })
 hbs.handlebars.registerHelper('ifEqual', function (v1, v2, options) {
   if (v1 === v2) {
     return options.fn(this);
@@ -40,6 +40,7 @@ app.use((req, res, next) => {
   res.locals.user = req.user
   res.locals.success_msg = req.flash('success_msg')
   res.locals.warning_msg = req.flash('warning_msg')
+  res.locals.login_error_msg = req.flash('login_error_msg')
   next()
 })
 app.use(routes)
